@@ -1,4 +1,36 @@
-# TempoWeb
+![Tempo Logo](./logo/tempo-full@0.5x.png)
+
+> Your life as you've never seen it before.
+
+Next-level journaling / day diary web app.
+
+# Features
+
+- Day Diary
+  - Plan - Events - Priorities
+  - Diary - Horoscope - Notes - Good - Bad - Forward - Gallery
+- Tags
+- Locations
+- Schedule
+- To-Do
+- Tags
+- XP system
+- 3rd Party SSO (login with facebook/google/twitter)
+- Integration with social media
+- Quick add syntax
+- Notifications
+- Mobile App
+- Streaks
+- Command Line API
+- Lock/unlock
+
+# Technology
+
+- Meteor
+- React
+- Material Design
+
+# Development
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
@@ -12,7 +44,9 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Build artifacts are stored in the `dist/` directory.
+
+Run `ng build` to build Tempo. Use the `--prod` flag for a production build.
 
 ## Running unit tests
 
