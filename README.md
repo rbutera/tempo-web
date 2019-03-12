@@ -1,4 +1,4 @@
-![Tempo](./logo/v3/full-dark/passion-round@0.5x.png)
+![Tempo](./src/assets/img/logo/full-dark/passion-square@0.5x.png)
 
 > Your life as you've never seen it before.
 
