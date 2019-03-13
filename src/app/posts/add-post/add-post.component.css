@@ -1,0 +1,7 @@
+.fill-remaining-space {
+  flex: 1 1 auto;
+}
+
+.add-post-button {
+  padding: 0 14px;
+}

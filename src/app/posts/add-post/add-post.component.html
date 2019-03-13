@@ -1,0 +1,30 @@
+<div class="add-post">
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <div class="fill-remaining-space" style="padding: 40px 0px 20px 0px;">
+        <form
+          [formGroup]="addPostForm"
+          autocomplete="off"
+          novalidate
+          (ngSubmit)="onSubmit()"
+        >
+          <mat-form-field
+            floatLabel="auto"
+            style="width: 90%; padding-right: 10px;"
+          >
+            <mat-label>What's new?</mat-label>
+            <input matInput formControlName="body" />
+          </mat-form-field>
+          <button
+            mat-raised-button
+            class="add-post-button"
+            color="primary"
+            type="submit"
+          >
+            ADD
+          </button>
+        </form>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>

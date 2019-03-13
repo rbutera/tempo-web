@@ -1,0 +1,11 @@
+<div class="post-list">
+  <div *ngIf="postsService.posts.length">
+    <mat-card class="post-card" *ngFor="let post of postsService.posts">{{
+      post
+    }}</mat-card>
+  </div>
+
+  <div *ngIf="!postsService.posts.length">
+    <p>No Posts</p>
+  </div>
+</div>
