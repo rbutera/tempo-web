@@ -4,9 +4,16 @@ import { Injectable } from "@angular/core";
   providedIn: "root"
 })
 export class PostsService {
-  posts: string[] = ["hello world"];
+  posts: Post[];
 
-  add(post: string) {
+  add(body: string) {
+    const post = {
+      timestamp: Date.now(),
+      createdAt: Date.now(),
+      id: uuid(),
+      author: "rai",
+      body
+    };
     this.posts.push(post);
   }
 
@@ -15,4 +22,12 @@ export class PostsService {
   }
 
   constructor() {}
+}
+
+interface Post {
+  body: string[];
+  timestamp: Date;
+  createdAt: Date;
+  id: string;
+  author: string;
 }

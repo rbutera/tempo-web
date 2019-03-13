@@ -16,9 +16,10 @@ import {
 import { PostListComponent } from './posts/post-list/post-list.component';
 import { AddPostComponent } from './posts/add-post/add-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PostComponent } from './posts/post/post.component';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, PostListComponent, AddPostComponent],
+  declarations: [AppComponent, LayoutComponent, PostListComponent, AddPostComponent, PostComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

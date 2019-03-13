@@ -1,0 +1,9 @@
+<mat-card
+  class="post-card"
+  contentEditable="true"
+  (keydown)="onKeyDown($event)"
+  (keypress)="onKeyPress($event)"
+  (keyup)="onKeyUp($event)"
+>
+  {{ post }}
+</mat-card>
