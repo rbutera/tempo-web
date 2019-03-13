@@ -5,3 +5,12 @@
 .add-post-button {
   padding: 0 14px;
 }
+
+.add-post {
+  position: fixed;
+  bottom: 0px;
+  /* padding-bottom: 25px; */
+  padding-top: 25px;
+  width: 100%;
+  display: block;
+}

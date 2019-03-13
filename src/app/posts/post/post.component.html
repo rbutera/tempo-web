@@ -1,17 +1,15 @@
-<mat-card
+<div
   class="post-card"
   (keydown)="onKeyDown($event)"
   (keypress)="onKeyPress($event)"
   (keyup)="onKeyUp($event)"
 >
-  <mat-card-content>
-    <div class="post-card-content">
-      <span class="post-body" contentEditable="true">
-        {{ post.body }}
-      </span>
-      <span class="post-timestamp">
-        {{ post.timestamp | date: "HH:mm" }}
-      </span>
-    </div>
-  </mat-card-content>
-</mat-card>
+  <div class="post-card-content">
+    <span class="post-timestamp">
+      {{ post.timestamp | date: "HH:mm" }}
+    </span>
+    <span class="post-body" contentEditable="true">
+      {{ post.body }}
+    </span>
+  </div>
+</div>
