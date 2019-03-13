@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { post } from "selenium-webdriver/http";
 
 @Component({
   selector: "app-post",
@@ -13,7 +12,7 @@ export class PostComponent implements OnInit {
 
   onKeyDown(event) {
     console.debug("onKeyDown", event);
-    if (event.key === "Enter") {
+    if (event.key === "Enter" && event.shiftKey) {
       event.preventDefault();
       event.target.blur();
     }
