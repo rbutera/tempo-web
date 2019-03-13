@@ -13,6 +13,7 @@ import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatDatepickerModule } from "@angular/material/datepicker";
 import { MatCheckboxModule } from "@angular/material/checkbox";
+import { MatTabsModule } from "@angular/material/tabs";
 
 @NgModule({
   declarations: [],
@@ -24,6 +25,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
     MatCardModule,
     MatStepperModule,
     MatButtonModule,
+    MatTabsModule,
     MatBadgeModule,
     MatChipsModule,
     MatIconModule,
@@ -35,6 +37,7 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
   exports: [
     MatToolbarModule,
     MatSidenavModule,
+    MatTabsModule,
     MatMenuModule,
     MatCardModule,
     MatStepperModule,

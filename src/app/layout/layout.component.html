@@ -2,33 +2,68 @@
   <mat-sidenav
     #drawer
     class="sidenav"
+    position="end"
     fixedInViewport="true"
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
   >
-    <mat-toolbar>Menu</mat-toolbar>
+    <mat-toolbar>
+      <mat-toolbar-row><h1>Rai</h1></mat-toolbar-row>
+      <mat-toolbar-row style="height: 100px; text-align: center;"
+        ><img
+          src="/assets/img/logo/emblem/passion-round.svg"
+          height="100%"
+          style="display: block; margin: 0 auto;"
+      /></mat-toolbar-row>
+      <mat-toolbar-row class="experience-row"
+        >Level 10 - 1337XP</mat-toolbar-row
+      >
+    </mat-toolbar>
+    <mat-divider></mat-divider>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item href="#">Journal</a>
+      <a mat-list-item href="#">Gallery</a>
+      <a mat-list-item href="#">Combos</a>
+      <a mat-list-item href="#">Highlights</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="#">Settings</a>
+      <a mat-list-item href="#">Help Center</a>
+      <a mat-list-item href="#">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="accent">
+    <!-- <mat-toolbar color="accent">
+        <nav mat-tab-nav-bar aria-label="weather navigation links">
+          <a mat-tab-link>
+            tab1
+          </a>
+          <a mat-tab-link>
+            tab2
+          </a>
+        </nav>
+        
+      </mat-toolbar> -->
+
+    <nav mat-tab-nav-bar>
+      <a
+        mat-tab-link
+        *ngFor="let link of links"
+        (click)="activeLink = link"
+        [active]="activeLink == link"
+      >
+        {{ link }}
+      </a>
+      <div style="flex: 1 1 auto;"></div>
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
+        style="padding-right: 10px;"
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <img
-        src="/assets/img/logo/full-light/passion-round.svg"
-        alt="tempo"
-        height="40"
-      />
-    </mat-toolbar>
+    </nav>
     <div class="content-container">
       <app-add-post></app-add-post>
       <app-post-list></app-post-list>

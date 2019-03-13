@@ -9,6 +9,8 @@ import { map } from "rxjs/operators";
   styleUrls: ["./layout.component.css"]
 })
 export class LayoutComponent {
+  links = ["F", "D", "T", "N"];
+  activeLink = this.links[0];
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
