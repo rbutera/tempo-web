@@ -4,31 +4,14 @@
 
 Next-level journaling / day diary web app.
 
-# Features
+For a full list of features check out [features.md](./features.md)
 
-- Day Diary
-  - Plan - Events - Priorities
-  - Diary - Horoscope - Notes - Good - Bad - Forward - Gallery
-- Tags
-- Locations
-- Schedule
-- To-Do
-- Tags
-- XP system
-- 3rd Party SSO (login with facebook/google/twitter)
-- Integration with social media
-- Quick add syntax
-- Notifications
-- Mobile App
-- Streaks
-- Command Line API
-- Lock/unlock
+will be live at https://tempo.rstlss.org
 
-# Technology
+# Technology Stack
 
-- Meteor
-- React
-- Material Design
+- Angular
+- Firebase
 
 # Development
 
