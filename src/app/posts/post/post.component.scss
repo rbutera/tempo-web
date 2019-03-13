@@ -1,3 +1,27 @@
 .post-card {
   margin-top: 10px;
 }
+
+.post-card-content {
+  display: flex;
+  font-size: 1.2rem;
+  line-height: 2rem;
+
+  .post-body {
+    vertical-align: middle;
+    flex: 1 1 auto;
+    height: 100%;
+    &:focus {
+      outline: 0px solid transparent;
+    }
+  }
+
+  .post-timestamp {
+    vertical-align: middle;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding-right: 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+}

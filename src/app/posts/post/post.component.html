@@ -1,9 +1,17 @@
 <mat-card
   class="post-card"
-  contentEditable="true"
   (keydown)="onKeyDown($event)"
   (keypress)="onKeyPress($event)"
   (keyup)="onKeyUp($event)"
 >
-  {{ post }}
+  <mat-card-content>
+    <div class="post-card-content">
+      <span class="post-body" contentEditable="true">
+        {{ post.body }}
+      </span>
+      <span class="post-timestamp">
+        {{ post.timestamp | date: "HH:mm" }}
+      </span>
+    </div>
+  </mat-card-content>
 </mat-card>

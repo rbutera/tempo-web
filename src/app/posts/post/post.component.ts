@@ -15,6 +15,7 @@ export class PostComponent implements OnInit {
     console.debug("onKeyDown", event);
     if (event.key === "Enter") {
       event.preventDefault();
+      event.target.blur();
     }
   }
 
