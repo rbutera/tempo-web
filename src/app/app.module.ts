@@ -11,17 +11,29 @@ import {
   MatButtonModule,
   MatSidenavModule,
   MatIconModule,
-  MatListModule, MatInputModule, MatSelectModule, MatRadioModule, MatCardModule
+  MatListModule,
+  MatInputModule,
+  MatSelectModule,
+  MatRadioModule,
+  MatCardModule
 } from "@angular/material";
-import { PostListComponent } from './posts/post-list/post-list.component';
-import { AddPostComponent } from './posts/add-post/add-post.component';
-import { ReactiveFormsModule } from '@angular/forms';
-import { PostComponent } from './posts/post/post.component';
-import { NavigationComponent } from './menu/navigation/navigation.component';
-import { MenuAccountInfoComponent } from './menu/menu-account-info/menu-account-info.component';
+import { PostListComponent } from "./posts/post-list/post-list.component";
+import { AddPostComponent } from "./posts/add-post/add-post.component";
+import { ReactiveFormsModule } from "@angular/forms";
+import { PostComponent } from "./posts/post/post.component";
+import { NavigationComponent } from "./menu/navigation/navigation.component";
+import { MenuAccountInfoComponent } from "./menu/menu-account-info/menu-account-info.component";
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, PostListComponent, AddPostComponent, PostComponent, NavigationComponent, MenuAccountInfoComponent],
+  declarations: [
+    AppComponent,
+    LayoutComponent,
+    PostListComponent,
+    AddPostComponent,
+    PostComponent,
+    NavigationComponent,
+    MenuAccountInfoComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
