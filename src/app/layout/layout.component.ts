@@ -2,15 +2,31 @@ import { Component } from "@angular/core";
 import { BreakpointObserver, Breakpoints } from "@angular/cdk/layout";
 import { Observable } from "rxjs";
 import { map } from "rxjs/operators";
+import {
+  faHome,
+  faCalendar,
+  faTag,
+  faBell
+} from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-layout",
   templateUrl: "./layout.component.html",
-  styleUrls: ["./layout.component.css"]
+  styleUrls: ["./layout.component.scss"]
 })
 export class LayoutComponent {
-  links = ["F", "D", "T", "N"];
-  activeLink = this.links[0];
+  links = [
+    { name: "Feed", icon: faHome, href: "/" },
+    { name: "Day", icon: faCalendar, href: "/day" },
+    { name: "Tags", icon: faTag, href: "/tags" },
+    { name: "Notifications", icon: faBell, href: "/notifications" }
+  ];
+  activeLink = this.links[0].name;
+
+  setActive(name: string) {
+    this.activeLink = name;
+  }
+
   isHandset$: Observable<boolean> = this.breakpointObserver
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));

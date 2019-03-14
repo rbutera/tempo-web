@@ -1,0 +1,28 @@
+.menu-account-info {
+}
+
+.experience {
+  text-align: center;
+  font-size: 0.8rem;
+  .level {
+    .user-level {
+      font-weight: 800;
+      padding: 2px;
+    }
+  }
+
+  .level-xp-separator {
+    padding: 2px;
+  }
+
+  .xp {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .user-xp {
+    padding: 2px;
+  }
+
+  .level-xp {
+    padding: 2px;
+  }
+}

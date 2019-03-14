@@ -20,7 +20,10 @@
   padding: 10px;
 }
 
-.experience-row {
-  text-align: center;
-  font-size: 0.8rem;
+.tab-nav-bar-label {
+  padding-left: 10px;
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: inline-block;
+  }
 }

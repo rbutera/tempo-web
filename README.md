@@ -17,9 +17,15 @@ will be live at https://tempo.rstlss.org
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.5.
 
-## Development server
+## Development servers
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Full App Server
+
+Run `ng serve` for a dev server for the full app. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+### Component Storybook
+
+Run `yarn sb` to start a storybook server at port 6006. This is recommended for developing components.
 
 ## Code scaffolding
 
