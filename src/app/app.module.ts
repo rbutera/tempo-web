@@ -17,9 +17,11 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { AddPostComponent } from './posts/add-post/add-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PostComponent } from './posts/post/post.component';
+import { NavigationComponent } from './menu/navigation/navigation.component';
+import { MenuAccountInfoComponent } from './menu/menu-account-info/menu-account-info.component';
 
 @NgModule({
-  declarations: [AppComponent, LayoutComponent, PostListComponent, AddPostComponent, PostComponent],
+  declarations: [AppComponent, LayoutComponent, PostListComponent, AddPostComponent, PostComponent, NavigationComponent, MenuAccountInfoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
