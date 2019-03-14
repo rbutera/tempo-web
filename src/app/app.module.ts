@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { MaterialModule } from "./material/material.module";
@@ -38,6 +39,7 @@ import { MenuAccountInfoComponent } from "./menu/menu-account-info/menu-account-
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    FontAwesomeModule,
     BrowserAnimationsModule,
     LayoutModule,
     MatToolbarModule,

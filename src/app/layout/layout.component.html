@@ -18,10 +18,11 @@
       <a
         mat-tab-link
         *ngFor="let link of links"
-        (click)="activeLink = link"
-        [active]="activeLink == link"
+        (click)="setActive(link.name)"
+        [active]="activeLink == link.name"
       >
-        {{ link }}
+        <fa-icon [icon]="link.icon"></fa-icon>
+        <span class="tab-nav-bar-label">{{ link.name }}</span>
       </a>
       <div style="flex: 1 1 auto;"></div>
       <button

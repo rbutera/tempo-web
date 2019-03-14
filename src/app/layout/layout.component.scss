@@ -19,3 +19,11 @@
 .content-container {
   padding: 10px;
 }
+
+.tab-nav-bar-label {
+  padding-left: 10px;
+  display: none;
+  @media screen and (min-width: 1024px) {
+    display: inline-block;
+  }
+}

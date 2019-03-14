@@ -1,11 +1,9 @@
-<a mat-list-item href="#">Journal</a>
-<a mat-list-item href="#">Tasks</a>
-<a mat-list-item href="#">Combos</a>
-<a mat-list-item href="#">Gallery</a>
-<a mat-list-item href="#">Tags</a>
-<a mat-list-item href="#">Locations</a>
-<a mat-list-item href="#">Highlights</a>
-<mat-divider></mat-divider>
-<a mat-list-item href="#">Settings</a>
-<a mat-list-item href="#">Help Center</a>
-<a mat-list-item href="#">Logout</a>
+<div class="menu-navigation">
+  <a mat-list-item *ngFor="let link of links.main" [href]="link.href">
+    <fa-icon [icon]="link.icon"></fa-icon> {{ link.label }}
+  </a>
+  <mat-divider></mat-divider>
+  <a mat-list-item *ngFor="let link of links.utility" [href]="link.href">
+    <fa-icon [icon]="link.icon"></fa-icon> {{ link.label }}
+  </a>
+</div>
