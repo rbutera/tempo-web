@@ -1,3 +1,4 @@
+@import "../../../fonts.scss";
 .post-card {
   margin-top: 10px;
 }
@@ -8,6 +9,7 @@
   line-height: 2rem;
 
   .post-body {
+    font-family: $font-secondary;
     vertical-align: middle;
     flex: 1 1 auto;
     height: 100%;
