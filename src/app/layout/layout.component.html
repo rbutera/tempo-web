@@ -15,15 +15,22 @@
           height="100%"
           style="display: block; margin: 0 auto;"
       /></mat-toolbar-row>
-      <mat-toolbar-row class="experience-row"
-        >Level 10 - 1337XP</mat-toolbar-row
-      >
+      <mat-toolbar-row class="experience-row"></mat-toolbar-row>
+        <div class="level">Level <span class="user-level">10</span></div>
+        <span class="level-xp-separator">-</span>
+        <div class="xp">
+          <span class="user-xp">420</span>/<span class="level-xp">1337</span>
+        </div>
+      </mat-toolbar-row>
     </mat-toolbar>
     <mat-divider></mat-divider>
     <mat-nav-list>
       <a mat-list-item href="#">Journal</a>
-      <a mat-list-item href="#">Gallery</a>
+      <a mat-list-item href="#">Tasks</a>
       <a mat-list-item href="#">Combos</a>
+      <a mat-list-item href="#">Gallery</a>
+      <a mat-list-item href="#">Tags</a>
+      <a mat-list-item href="#">Locations</a>
       <a mat-list-item href="#">Highlights</a>
       <mat-divider></mat-divider>
       <a mat-list-item href="#">Settings</a>
@@ -32,18 +39,6 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <!-- <mat-toolbar color="accent">
-        <nav mat-tab-nav-bar aria-label="weather navigation links">
-          <a mat-tab-link>
-            tab1
-          </a>
-          <a mat-tab-link>
-            tab2
-          </a>
-        </nav>
-        
-      </mat-toolbar> -->
-
     <nav mat-tab-nav-bar>
       <a
         mat-tab-link
