@@ -18,9 +18,8 @@
       <a
         mat-tab-link
         *ngFor="let link of links"
-        (click)="setActive(link.name)"
         [routerLink]="link.href"
-        [active]="activeLink == link.name"
+        [active]="activeTab == link.href"
       >
         <fa-icon [icon]="link.icon"></fa-icon>
         <span class="tab-nav-bar-label">{{ link.name }}</span>
