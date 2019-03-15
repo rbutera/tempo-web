@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyC2ZKE8Tvoz1Gxshp472cCt6bDmMDsVqJU",
+    authDomain: "tempo-journal.firebaseapp.com",
+    databaseURL: "https://tempo-journal.firebaseio.com",
+    projectId: "tempo-journal",
+    storageBucket: "tempo-journal.appspot.com",
+    messagingSenderId: "641945819045"
+  }
 };
 
 /*
