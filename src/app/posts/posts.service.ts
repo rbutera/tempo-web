@@ -1,36 +1,66 @@
-import { Injectable } from "@angular/core";
-import uuid from "uuidv4";
-import { Observable } from "rxjs";
-import { AngularFirestore } from "@angular/fire/firestore";
+import { Injectable } from '@angular/core'
+import uuid from 'uuidv4'
+import { Observable } from 'rxjs'
+import { AngularFirestore } from '@angular/fire/firestore'
 
-function createPost(body: string = "<empty post>"): Post {
-  return {
-    timestamp: Date.now(),
-    createdAt: Date.now(),
-    author: "users/XeyxEcLvEGMQ4cy1E0mHHhpexk32",
-    body
-  };
+export interface PostBody {
+  body: string
+  tags: string[]
+  timestamp: Date
 }
 
+/**
+ * creates a post object with prefilled metadata
+ * @param postBody
+ */
+
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class PostsService {
-  posts: Observable<any>;
-
-  add(body: string) {
-    console.error("adding posts not yet implemented");
+  createPost(
+    postBody: PostBody = {
+      body: '<empty post>',
+      tags: [''],
+      timestamp: new Date()
+    }
+  ) {
+    const { body, timestamp, tags } = postBody
+    const post = {
+      timestamp,
+      createdAt: new Date(),
+      author: 'user/XeyxEcLvEGMQ4cy1E0mHHhpexk32',
+      tags,
+      body
+    }
+    console.error('adding posts not yet implemented')
+    return this.db.collection('posts').add(post)
   }
 
-  constructor(db: AngularFirestore) {
-    this.posts = db.collection("posts").valueChanges();
+  getPosts() {
+    return this.db
+      .collection('posts', ref => ref.orderBy('timestamp', 'desc'))
+      .snapshotChanges()
   }
+
+  updatePost(post: Post) {
+    const id = post.id
+    delete post.id
+    return this.db.doc(`posts/${id}`).update(post)
+  }
+
+  deletePost(post: Post) {
+    return this.db.doc(`posts/${post.id}`).delete()
+  }
+
+  constructor(private db: AngularFirestore) {}
 }
 
 export interface Post {
-  body: string;
-  timestamp: number;
-  createdAt: number;
-  id: string;
-  author: string;
+  id: string
+  body: string
+  timestamp: Date
+  createdAt: Date
+  author: string
+  tags: string[]
 }

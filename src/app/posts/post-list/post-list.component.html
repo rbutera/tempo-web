@@ -1,6 +1,8 @@
 <div class="post-list">
-  <app-post
-    *ngFor="let post of (postsService.posts | async)"
-    [post]="post"
-  ></app-post>
+  <ng-template [ngIf]="posts && posts.length" [ngIfElse]="noPosts">
+    <app-post *ngFor="let post of posts" [post]="post"></app-post>
+  </ng-template>
+  <ng-template #noPosts>
+    <p>No posts.</p>
+  </ng-template>
 </div>
