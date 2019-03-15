@@ -35,7 +35,7 @@
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "quotemark": [true, "double"],
+    "quotemark": [true, "single"],
     "trailing-comma": false,
     "no-output-on-prefix": true,
     "use-input-property-decorator": true,
@@ -46,6 +46,7 @@
     "use-life-cycle-interface": true,
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
-    "directive-class-suffix": true
+    "directive-class-suffix": true,
+    "semicolon": [true, "never"]
   }
 }

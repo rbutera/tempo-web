@@ -6,7 +6,8 @@
 >
   <div class="post-card-content">
     <span class="post-timestamp">
-      {{ post.timestamp | date: "HH:mm" }}
+      <!-- {{ post.timestamp | date: "HH:mm" }} -->
+      {{ post.timestamp.toDate() | date: 'HH:mm' }}
     </span>
     <mat-card
       (mouseenter)="hovering = true"
