@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { faPencilAlt } from "@fortawesome/free-solid-svg-icons";
 
 @Component({
   selector: "app-post",
@@ -7,7 +8,8 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class PostComponent implements OnInit {
   @Input() post;
-
+  hovering = false;
+  faPencilAlt = faPencilAlt;
   constructor() {}
 
   onKeyDown(event) {
@@ -19,11 +21,11 @@ export class PostComponent implements OnInit {
   }
 
   onKeyUp(event) {
-    console.debug("onKeyUp", event);
+    // console.debug("onKeyUp", event);
   }
 
   onKeyPress(event) {
-    console.debug("onKeyPress", event);
+    // console.debug("onKeyPress", event);
   }
 
   ngOnInit() {}

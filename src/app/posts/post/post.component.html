@@ -8,8 +8,14 @@
     <span class="post-timestamp">
       {{ post.timestamp | date: "HH:mm" }}
     </span>
-    <mat-card class="post-body" contentEditable="true">
-      {{ post.body }}
+    <mat-card
+      (mouseenter)="hovering = true"
+      (mouseleave)="hovering = false"
+      class="post-body"
+      contentEditable="true"
+    >
+      <div class="post-content">{{ post.body }}</div>
+      <fa-icon *ngIf="hovering" [icon]="faPencilAlt"></fa-icon>
     </mat-card>
   </div>
 </div>
