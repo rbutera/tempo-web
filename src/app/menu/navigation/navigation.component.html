@@ -1,9 +1,9 @@
 <div class="menu-navigation">
-  <a mat-list-item *ngFor="let link of links.main" [href]="link.href">
+  <a mat-list-item *ngFor="let link of links.main" [routerLink]="link.href">
     <fa-icon [icon]="link.icon"></fa-icon> {{ link.label }}
   </a>
   <mat-divider></mat-divider>
-  <a mat-list-item *ngFor="let link of links.utility" [href]="link.href">
+  <a mat-list-item *ngFor="let link of links.utility" [routerLink]="link.href">
     <fa-icon [icon]="link.icon"></fa-icon> {{ link.label }}
   </a>
 </div>

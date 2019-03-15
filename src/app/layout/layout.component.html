@@ -19,6 +19,7 @@
         mat-tab-link
         *ngFor="let link of links"
         (click)="setActive(link.name)"
+        [routerLink]="link.href"
         [active]="activeLink == link.name"
       >
         <fa-icon [icon]="link.icon"></fa-icon>
@@ -37,8 +38,7 @@
     </nav>
 
     <div class="content-container">
-      <app-add-post></app-add-post>
-      <app-post-list></app-post-list>
+      <router-outlet></router-outlet>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

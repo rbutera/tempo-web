@@ -17,7 +17,7 @@ import {
 export class LayoutComponent {
   links = [
     { name: "Feed", icon: faHome, href: "/" },
-    { name: "Day", icon: faCalendar, href: "/day" },
+    { name: "Journal", icon: faCalendar, href: "/journal" },
     { name: "Tags", icon: faTag, href: "/tags" },
     { name: "Notifications", icon: faBell, href: "/notifications" }
   ];
